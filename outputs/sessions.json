@@ -1,0 +1,1089 @@
+{
+    "INSERT": {
+        "0.0": {
+            "insert": "all_cases_test", 
+            "documents": [
+                {
+                    "A1": true, 
+                    "A2": false, 
+                    "A3": "cXQ", 
+                    "A4": -328, 
+                    "A5": [
+                        true, 
+                        false, 
+                        true, 
+                        true, 
+                        true, 
+                        true, 
+                        false, 
+                        true
+                    ], 
+                    "A6": [
+                        "6r3Gu6AoVk", 
+                        "pN", 
+                        "zzkCmk"
+                    ], 
+                    "A7": [
+                        93
+                    ], 
+                    "A8": {
+                        "A1": true, 
+                        "A2": false, 
+                        "A3": "wfi", 
+                        "A4": -664, 
+                        "A5": [
+                            false, 
+                            true, 
+                            true, 
+                            false, 
+                            false
+                        ], 
+                        "A6": [
+                            "eEYjULFKi", 
+                            "Ad3o0K", 
+                            "4f", 
+                            "pz"
+                        ], 
+                        "A7": [
+                            -110, 
+                            179, 
+                            281, 
+                            99, 
+                            352
+                        ]
+                    }, 
+                    "A9": {
+                        "A8": {
+                            "A1": true, 
+                            "A2": false, 
+                            "A3": "Dy3X40g", 
+                            "A4": -132, 
+                            "A5": [
+                                true, 
+                                true, 
+                                false, 
+                                true, 
+                                true, 
+                                true, 
+                                true
+                            ], 
+                            "A6": [
+                                "R", 
+                                "oJU6", 
+                                "a4l", 
+                                "F_EG6l", 
+                                "I2l", 
+                                "jhuXA", 
+                                "IKfWRyzpdE", 
+                                "R", 
+                                "BmEFkp5eM", 
+                                "4iUM1"
+                            ], 
+                            "A7": [
+                                722, 
+                                -502, 
+                                798, 
+                                -227, 
+                                334, 
+                                -568, 
+                                748, 
+                                -237, 
+                                984, 
+                                -50
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }, 
+    "UPDATE": {
+        "0.0": {
+            "update": "all_cases_test", 
+            "updates": [
+                {
+                    "q": {
+                        "A1": true, 
+                        "A2": false, 
+                        "A3": "NBP", 
+                        "A4": 62, 
+                        "A5": {
+                            "$near": {
+                                "$geometry": {
+                                    "type": "Point", 
+                                    "coordinates": [
+                                        0, 
+                                        0
+                                    ]
+                                }, 
+                                "$maxDistance": 50
+                            }
+                        }, 
+                        "A6": {
+                            "$gte": -677, 
+                            "$lt": -191
+                        }, 
+                        "A7": [
+                            -112, 
+                            -299, 
+                            498, 
+                            -599
+                        ], 
+                        "A8": [
+                            true, 
+                            false, 
+                            true, 
+                            true, 
+                            true
+                        ], 
+                        "A9": [
+                            "gJ6SsYW0", 
+                            "yy", 
+                            "WIaX3x", 
+                            "R__9mgI", 
+                            "vxznXgdrIu"
+                        ], 
+                        "A10": [
+                            -541, 
+                            -863
+                        ], 
+                        "A11": {
+                            "$elemMatch": {
+                                "$gte": -378, 
+                                "$lt": 637
+                            }
+                        }, 
+                        "A12.A1": true, 
+                        "A12.A2": false, 
+                        "A12.A3": "TnqEu6", 
+                        "A12.A4": -790, 
+                        "A12.A5": {
+                            "$near": {
+                                "$geometry": {
+                                    "type": "Point", 
+                                    "coordinates": [
+                                        0, 
+                                        0
+                                    ]
+                                }, 
+                                "$maxDistance": 50
+                            }
+                        }, 
+                        "A12.A6": {
+                            "$gte": -597, 
+                            "$lt": -390
+                        }, 
+                        "A12.A7": [
+                            138, 
+                            -997, 
+                            -86, 
+                            -160
+                        ], 
+                        "A12.A8": [
+                            false, 
+                            true, 
+                            false, 
+                            true, 
+                            false, 
+                            true, 
+                            false
+                        ], 
+                        "A12.A9": [
+                            "LeLqC4p", 
+                            "xw"
+                        ], 
+                        "A12.A10": [
+                            -702, 
+                            130
+                        ], 
+                        "A12.A11": {
+                            "$elemMatch": {
+                                "$gte": -151, 
+                                "$lt": -12
+                            }
+                        }, 
+                        "A13.A12.A1": true, 
+                        "A13.A12.A2": false, 
+                        "A13.A12.A3": "rlp4_n", 
+                        "A13.A12.A4": -322, 
+                        "A13.A12.A5": {
+                            "$near": {
+                                "$geometry": {
+                                    "type": "Point", 
+                                    "coordinates": [
+                                        0, 
+                                        0
+                                    ]
+                                }, 
+                                "$maxDistance": 50
+                            }
+                        }, 
+                        "A13.A12.A6": {
+                            "$gte": -966, 
+                            "$lt": 572
+                        }, 
+                        "A13.A12.A7": [
+                            86, 
+                            -460, 
+                            787, 
+                            287, 
+                            70, 
+                            -650
+                        ], 
+                        "A13.A12.A8": [
+                            false, 
+                            false, 
+                            true, 
+                            true, 
+                            true, 
+                            false, 
+                            true, 
+                            true, 
+                            false, 
+                            true
+                        ], 
+                        "A13.A12.A9": [
+                            "xsx8Nh9F4D", 
+                            "t", 
+                            "hIBs", 
+                            "4R9gphrP", 
+                            "WOtqkXV", 
+                            "c6awPls", 
+                            "mpAKPuWq3A"
+                        ], 
+                        "A13.A12.A10": [
+                            465, 
+                            -621, 
+                            328, 
+                            -142, 
+                            -602, 
+                            -720, 
+                            589, 
+                            912, 
+                            416, 
+                            189
+                        ], 
+                        "A13.A12.A11": {
+                            "$elemMatch": {
+                                "$gte": 234, 
+                                "$lt": 326
+                            }
+                        }
+                    }, 
+                    "u": {
+                        "$set": {
+                            "A15.A14.A6": [
+                                "SWP0", 
+                                "eZqJAa"
+                            ], 
+                            "A15.A14.A3": "TqxU7", 
+                            "A15.A14.A2": false, 
+                            "A15.A14.A1": true, 
+                            "A15.A14.A4": -280, 
+                            "A1": true, 
+                            "A15.A14.A7": [
+                                -710, 
+                                849, 
+                                -694, 
+                                168, 
+                                194, 
+                                196, 
+                                57
+                            ], 
+                            "A3": "dNVM_muw", 
+                            "A2": false, 
+                            "A5": [
+                                true, 
+                                false, 
+                                false, 
+                                false, 
+                                true, 
+                                false, 
+                                false, 
+                                true, 
+                                false
+                            ], 
+                            "A4": -242, 
+                            "A7": [
+                                -764, 
+                                131, 
+                                74, 
+                                -116, 
+                                -501, 
+                                38, 
+                                102, 
+                                995, 
+                                -761, 
+                                70
+                            ], 
+                            "A6": [
+                                "k4K", 
+                                "YT", 
+                                "7SKwlXsSr0", 
+                                "hXoKLaBnR", 
+                                "dDVaHwyiW", 
+                                "eWaWbEwImj", 
+                                "YuK", 
+                                "7", 
+                                "5bzFM7bYW", 
+                                "pOxr"
+                            ], 
+                            "A14.A5": [
+                                false, 
+                                false, 
+                                true, 
+                                false
+                            ], 
+                            "A14.A4": 1000, 
+                            "A14.A7": [
+                                -849, 
+                                54, 
+                                -252
+                            ], 
+                            "A14.A6": [
+                                "iKvcvv6S", 
+                                "fjgn6fQez", 
+                                "O", 
+                                "ZKlOhibrs", 
+                                "L9ZzLQ_q5l"
+                            ], 
+                            "A14.A1": true, 
+                            "A15.A14.A5": [
+                                true, 
+                                false, 
+                                false, 
+                                true, 
+                                true, 
+                                false, 
+                                false
+                            ], 
+                            "A14.A3": "U9xh", 
+                            "A14.A2": false
+                        }, 
+                        "$push": {
+                            "A11": [
+                                true, 
+                                true, 
+                                true, 
+                                false
+                            ], 
+                            "A10": 863, 
+                            "A13": [
+                                275, 
+                                916, 
+                                772, 
+                                393, 
+                                -194, 
+                                341, 
+                                -644, 
+                                -586
+                            ], 
+                            "A12": [
+                                "YSjGm", 
+                                "9fx86MrH3R", 
+                                "1", 
+                                "O_5"
+                            ], 
+                            "A15.A14.A10": -159, 
+                            "A15.A14.A11": [
+                                true, 
+                                true, 
+                                false, 
+                                false, 
+                                false, 
+                                true, 
+                                false, 
+                                true, 
+                                true, 
+                                false
+                            ], 
+                            "A15.A14.A12": [
+                                "Qyfr7jvDB1"
+                            ], 
+                            "A15.A14.A13": [
+                                943, 
+                                741, 
+                                -572, 
+                                607, 
+                                285, 
+                                176, 
+                                -459, 
+                                -492, 
+                                -934
+                            ], 
+                            "A9": "PawyT0Y", 
+                            "A14.A9": "xFoEhcI", 
+                            "A14.A8": false, 
+                            "A14.A10": 382, 
+                            "A14.A11": [
+                                false
+                            ], 
+                            "A8": true, 
+                            "A14.A13": [
+                                -138, 
+                                -960, 
+                                -895, 
+                                -918, 
+                                -720, 
+                                586, 
+                                -48, 
+                                -791, 
+                                227, 
+                                -380
+                            ], 
+                            "A14.A12": [
+                                "yZtcC", 
+                                "UUG", 
+                                "wqYIPn", 
+                                "GqWriZmL", 
+                                "o6VF_", 
+                                "zFqNI_L", 
+                                "jhBoX_", 
+                                "Wv9MAQH", 
+                                "kLkP6FxvhZ"
+                            ], 
+                            "A15.A14.A8": true, 
+                            "A15.A14.A9": "M0lmLFI5VX"
+                        }
+                    }, 
+                    "multi": true
+                }
+            ]
+        }
+    }, 
+    "UPDATE_ALL": {
+        "0.0": {
+            "update": "all_cases_test", 
+            "updates": [
+                {
+                    "q": {}, 
+                    "u": {
+                        "$set": {
+                            "A15.A14.A6": [
+                                "MzGqWRi", 
+                                "XS1FyH5v", 
+                                "InyP", 
+                                "mo", 
+                                "K7", 
+                                "O", 
+                                "1rBCZJbHt", 
+                                "bvK"
+                            ], 
+                            "A15.A14.A3": "ab6C", 
+                            "A15.A14.A2": false, 
+                            "A15.A14.A1": true, 
+                            "A15.A14.A4": -576, 
+                            "A1": true, 
+                            "A15.A14.A7": [
+                                -165, 
+                                -728, 
+                                -995, 
+                                291, 
+                                730, 
+                                582, 
+                                -344, 
+                                -60, 
+                                -171, 
+                                -831
+                            ], 
+                            "A3": "b21Eunp", 
+                            "A2": false, 
+                            "A5": [
+                                true, 
+                                true, 
+                                true, 
+                                false, 
+                                true, 
+                                true, 
+                                true, 
+                                false
+                            ], 
+                            "A4": 740, 
+                            "A7": [
+                                583, 
+                                111, 
+                                774, 
+                                -154, 
+                                310
+                            ], 
+                            "A6": [
+                                "H", 
+                                "FGEad", 
+                                "z", 
+                                "Zw3n1g91", 
+                                "b4R", 
+                                "LEv"
+                            ], 
+                            "A14.A5": [
+                                false, 
+                                false
+                            ], 
+                            "A14.A4": -130, 
+                            "A14.A7": [
+                                -269, 
+                                512, 
+                                810, 
+                                -618, 
+                                297, 
+                                -179
+                            ], 
+                            "A14.A6": [
+                                "vqr"
+                            ], 
+                            "A14.A1": true, 
+                            "A15.A14.A5": [
+                                false, 
+                                false, 
+                                false, 
+                                false, 
+                                true, 
+                                true, 
+                                true, 
+                                true, 
+                                false, 
+                                false
+                            ], 
+                            "A14.A3": "0B_qW", 
+                            "A14.A2": false
+                        }, 
+                        "$push": {
+                            "A11": [
+                                true
+                            ], 
+                            "A10": -377, 
+                            "A13": [
+                                57, 
+                                303, 
+                                -162, 
+                                -275, 
+                                779
+                            ], 
+                            "A12": [
+                                "kkTyL", 
+                                "_HH8E", 
+                                "sQy", 
+                                "yTlXXHhS", 
+                                "rx", 
+                                "OWmZ0BYol"
+                            ], 
+                            "A15.A14.A10": 329, 
+                            "A15.A14.A11": [
+                                false, 
+                                true, 
+                                false, 
+                                false, 
+                                true, 
+                                false, 
+                                false, 
+                                true
+                            ], 
+                            "A15.A14.A12": [
+                                "op04T", 
+                                "ie", 
+                                "sGtw1LKr", 
+                                "TZr", 
+                                "431Pm4TJ", 
+                                "O", 
+                                "VkEZtVn2DU", 
+                                "J"
+                            ], 
+                            "A15.A14.A13": [
+                                -815, 
+                                -518, 
+                                402, 
+                                317, 
+                                914, 
+                                -211, 
+                                513
+                            ], 
+                            "A9": "BksL8c_kDp", 
+                            "A14.A9": "8hcGJeh4", 
+                            "A14.A8": true, 
+                            "A14.A10": -47, 
+                            "A14.A11": [
+                                true, 
+                                true, 
+                                false, 
+                                true, 
+                                false, 
+                                true, 
+                                true
+                            ], 
+                            "A8": true, 
+                            "A14.A13": [
+                                491, 
+                                147, 
+                                383, 
+                                349, 
+                                -953, 
+                                804, 
+                                -575, 
+                                -973
+                            ], 
+                            "A14.A12": [
+                                "0G", 
+                                "x"
+                            ], 
+                            "A15.A14.A8": false, 
+                            "A15.A14.A9": "9MFci4"
+                        }
+                    }, 
+                    "multi": true
+                }
+            ]
+        }
+    }, 
+    "DELETE": {
+        "0.0": {
+            "delete": "all_cases_test", 
+            "deletes": [
+                {
+                    "q": {
+                        "A1": true, 
+                        "A2": false, 
+                        "A3": "T", 
+                        "A4": 584, 
+                        "A5": {
+                            "$near": {
+                                "$geometry": {
+                                    "type": "Point", 
+                                    "coordinates": [
+                                        0, 
+                                        0
+                                    ]
+                                }, 
+                                "$maxDistance": 50
+                            }
+                        }, 
+                        "A6": {
+                            "$gte": -216, 
+                            "$lt": 46
+                        }, 
+                        "A7": [
+                            736, 
+                            966, 
+                            -939, 
+                            -106, 
+                            -396, 
+                            -351
+                        ], 
+                        "A8": [
+                            true, 
+                            true, 
+                            true, 
+                            true, 
+                            false, 
+                            true, 
+                            false
+                        ], 
+                        "A9": [
+                            "9GxWA1o2", 
+                            "oIs6"
+                        ], 
+                        "A10": [
+                            462, 
+                            -47, 
+                            253, 
+                            -243
+                        ], 
+                        "A11": {
+                            "$elemMatch": {
+                                "$gte": 327, 
+                                "$lt": 655
+                            }
+                        }, 
+                        "A12.A1": true, 
+                        "A12.A2": false, 
+                        "A12.A3": "POurxLe", 
+                        "A12.A4": 816, 
+                        "A12.A5": {
+                            "$near": {
+                                "$geometry": {
+                                    "type": "Point", 
+                                    "coordinates": [
+                                        0, 
+                                        0
+                                    ]
+                                }, 
+                                "$maxDistance": 50
+                            }
+                        }, 
+                        "A12.A6": {
+                            "$gte": -995, 
+                            "$lt": -613
+                        }, 
+                        "A12.A7": [
+                            -203, 
+                            -478, 
+                            667, 
+                            -756, 
+                            -491, 
+                            932, 
+                            -658, 
+                            704, 
+                            37, 
+                            -627
+                        ], 
+                        "A12.A8": [
+                            false, 
+                            true, 
+                            false, 
+                            true
+                        ], 
+                        "A12.A9": [
+                            "IqOFl_", 
+                            "ezGIIv", 
+                            "l", 
+                            "fIqufuJ", 
+                            "FT", 
+                            "m", 
+                            "8rp0a", 
+                            "SNh01DzEex", 
+                            "C6W"
+                        ], 
+                        "A12.A10": [
+                            -974, 
+                            -954, 
+                            776, 
+                            -254
+                        ], 
+                        "A12.A11": {
+                            "$elemMatch": {
+                                "$gte": -583, 
+                                "$lt": -525
+                            }
+                        }, 
+                        "A13.A12.A1": true, 
+                        "A13.A12.A2": false, 
+                        "A13.A12.A3": "Iq", 
+                        "A13.A12.A4": -801, 
+                        "A13.A12.A5": {
+                            "$near": {
+                                "$geometry": {
+                                    "type": "Point", 
+                                    "coordinates": [
+                                        0, 
+                                        0
+                                    ]
+                                }, 
+                                "$maxDistance": 50
+                            }
+                        }, 
+                        "A13.A12.A6": {
+                            "$gte": -215, 
+                            "$lt": 976
+                        }, 
+                        "A13.A12.A7": [
+                            755, 
+                            -650, 
+                            701, 
+                            29, 
+                            28, 
+                            185
+                        ], 
+                        "A13.A12.A8": [
+                            false, 
+                            false, 
+                            true, 
+                            false, 
+                            true
+                        ], 
+                        "A13.A12.A9": [
+                            "TuJ684v", 
+                            "lOwuUaYC", 
+                            "L_kF", 
+                            "PUzrtG", 
+                            "Z0F6"
+                        ], 
+                        "A13.A12.A10": [
+                            540
+                        ], 
+                        "A13.A12.A11": {
+                            "$elemMatch": {
+                                "$gte": 0, 
+                                "$lt": 569
+                            }
+                        }
+                    }, 
+                    "limit": 0
+                }
+            ]
+        }
+    }, 
+    "FIND": {
+        "0.0": {
+            "find": "all_cases_test", 
+            "filter": {
+                "A1": true, 
+                "A2": false, 
+                "A3": "w4", 
+                "A4": -70, 
+                "A6": {
+                    "$gte": -134, 
+                    "$lt": 244
+                }, 
+                "A7": [
+                    -259, 
+                    -313, 
+                    159
+                ], 
+                "A8": [
+                    true, 
+                    true
+                ], 
+                "A9": [
+                    "dMk61G", 
+                    "Nh0KpK", 
+                    "dX1_WyUZHJ", 
+                    "HY", 
+                    "I9ckn3", 
+                    "HNRnncOsu"
+                ], 
+                "A10": [
+                    -17, 
+                    15, 
+                    683
+                ], 
+                "A11": {
+                    "$elemMatch": {
+                        "$gte": 540, 
+                        "$lt": 918
+                    }
+                }, 
+                "A12.A1": true, 
+                "A12.A2": false, 
+                "A12.A3": "9fDqEg", 
+                "A12.A4": 771, 
+                "A12.A6": {
+                    "$gte": -855, 
+                    "$lt": -536
+                }, 
+                "A12.A7": [
+                    806, 
+                    974
+                ], 
+                "A12.A8": [
+                    true, 
+                    false, 
+                    false, 
+                    true, 
+                    false, 
+                    false, 
+                    true, 
+                    true, 
+                    false
+                ], 
+                "A12.A9": [
+                    "Wb", 
+                    "iGVNrl9v", 
+                    "MX", 
+                    "Sl2GnxVg", 
+                    "usswWZKB"
+                ], 
+                "A12.A10": [
+                    622
+                ], 
+                "A12.A11": {
+                    "$elemMatch": {
+                        "$gte": -409, 
+                        "$lt": -375
+                    }
+                }, 
+                "A13.A12.A1": true, 
+                "A13.A12.A2": false, 
+                "A13.A12.A3": "f0P", 
+                "A13.A12.A4": -309, 
+                "A13.A12.A6": {
+                    "$gte": -757, 
+                    "$lt": 44
+                }, 
+                "A13.A12.A7": [
+                    -688, 
+                    563
+                ], 
+                "A13.A12.A8": [
+                    false, 
+                    false, 
+                    true, 
+                    true, 
+                    false, 
+                    true, 
+                    false, 
+                    true, 
+                    false, 
+                    false
+                ], 
+                "A13.A12.A9": [
+                    "QP4sBh", 
+                    "tUNUmgTE8"
+                ], 
+                "A13.A12.A10": [
+                    992, 
+                    -413, 
+                    -773, 
+                    508, 
+                    -755, 
+                    822, 
+                    -592, 
+                    -519, 
+                    531
+                ], 
+                "A13.A12.A11": {
+                    "$elemMatch": {
+                        "$gte": -685, 
+                        "$lt": 898
+                    }
+                }
+            }
+        }
+    }, 
+    "FIND_SORT": {
+        "0.0": {
+            "find": "all_cases_test", 
+            "filter": {
+                "A1": true, 
+                "A2": false, 
+                "A3": "ZB", 
+                "A4": 633, 
+                "A6": {
+                    "$gte": -695, 
+                    "$lt": 536
+                }, 
+                "A7": [
+                    240, 
+                    516, 
+                    822, 
+                    -904
+                ], 
+                "A8": [
+                    true, 
+                    true, 
+                    false, 
+                    true, 
+                    true, 
+                    true, 
+                    false
+                ], 
+                "A9": [
+                    "okvLSHKFQ", 
+                    "Afa", 
+                    "h5Q5vjeuTa", 
+                    "Un_C9K"
+                ], 
+                "A10": [
+                    -231, 
+                    -210
+                ], 
+                "A11": {
+                    "$elemMatch": {
+                        "$gte": -488, 
+                        "$lt": 137
+                    }
+                }, 
+                "A12.A1": true, 
+                "A12.A2": false, 
+                "A12.A3": "7wGQ", 
+                "A12.A4": -214, 
+                "A12.A6": {
+                    "$gte": 160, 
+                    "$lt": 839
+                }, 
+                "A12.A7": [
+                    -473, 
+                    -135, 
+                    854, 
+                    -617, 
+                    404, 
+                    972, 
+                    -559
+                ], 
+                "A12.A8": [
+                    false, 
+                    true, 
+                    false, 
+                    false, 
+                    true, 
+                    true
+                ], 
+                "A12.A9": [
+                    "mQJQF", 
+                    "96", 
+                    "Jjo", 
+                    "sGWd", 
+                    "vDc9RGIOD", 
+                    "Zoc1FM", 
+                    "d", 
+                    "ENpT", 
+                    "PT", 
+                    "2"
+                ], 
+                "A12.A10": [
+                    -692, 
+                    -500, 
+                    714, 
+                    -6, 
+                    58, 
+                    -737, 
+                    -93, 
+                    343, 
+                    470, 
+                    -158
+                ], 
+                "A12.A11": {
+                    "$elemMatch": {
+                        "$gte": -517, 
+                        "$lt": -454
+                    }
+                }, 
+                "A13.A12.A1": true, 
+                "A13.A12.A2": false, 
+                "A13.A12.A3": "JXHr", 
+                "A13.A12.A4": 22, 
+                "A13.A12.A6": {
+                    "$gte": -51, 
+                    "$lt": 41
+                }, 
+                "A13.A12.A7": [
+                    566, 
+                    127, 
+                    580, 
+                    544, 
+                    -963, 
+                    855, 
+                    614, 
+                    175, 
+                    830, 
+                    122
+                ], 
+                "A13.A12.A8": [
+                    false, 
+                    false, 
+                    false, 
+                    false, 
+                    false
+                ], 
+                "A13.A12.A9": [
+                    "cNCxWslM", 
+                    "13Vyyn", 
+                    "7nF99MZS4", 
+                    "R"
+                ], 
+                "A13.A12.A10": [
+                    -676, 
+                    -894, 
+                    -408
+                ], 
+                "A13.A12.A11": {
+                    "$elemMatch": {
+                        "$gte": -331, 
+                        "$lt": 382
+                    }
+                }
+            }, 
+            "sort": {
+                "A1": 1, 
+                "A2": -1
+            }
+        }
+    }
+}

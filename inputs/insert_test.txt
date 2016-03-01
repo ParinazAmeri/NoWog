@@ -1,0 +1,8 @@
+{
+	INSERT: {
+		{},
+		{(A1: True)(A2: False)(A3: text_write)(A4: num_match)(A5: Array.Bool)(A6: Array.Text)(A7: Array.Num)(A8: (A1: True)(A2: False)(A3: text_write)(A4: num_match)(A5: Array.Bool)(A6: Array.Text)(A7: Array.Num))(A9: (A8: (A1: True)(A2: False)(A3: text_write)(A4: num_match)(A5: Array.Bool)(A6: Array.Text)(A7: Array.Num)))},
+		NULL,
+		0 - 1 = Uniform(10)
+	};
+}

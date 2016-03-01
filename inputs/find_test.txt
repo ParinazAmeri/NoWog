@@ -1,0 +1,14 @@
+{
+	FIND: {
+		{(A1: True)(A2: False)(A3: text_read)(A4: num_match)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op)(A12: (A1: True)(A2: False)(A3: text_read)(A4: num_match)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op))(A13: (A12: (A1: True)(A2: False)(A3: text_read)(A4: num_match)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op)))},
+		{},
+		NULL,
+		0 - 0 = uniform(1)
+	};
+	FIND_SORT: {
+		{(A1: True)(A2: False)(A3: text_read)(A4: num_match)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op)(A12: (A1: True)(A2: False)(A3: text_read)(A4: num_match)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op))(A13: (A12: (A1: True)(A2: False)(A3: text_read)(A4: num_match)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op)))},
+		{},
+		{(A1: 1)(A2: -1)},
+		0 - 0 = uniform(1)
+	};
+}

@@ -1,0 +1,43 @@
+{
+	# Adding comment in this way is available
+	# ------------------------------
+	# find with sort
+	ID_1: {
+		{(A2 : text_read)},
+		{},
+		{(A2: 1)},
+		1-10 = Uniform(10)
+	};
+	# ------------------------------
+	# insert
+	ID_2: {
+		{},
+		{(A2 : text_write)},
+		NULL,
+		1-10 = Uniform(10)
+	};
+	# ------------------------------
+	# delete
+	ID_3: {
+		{(A2 : text_read)},
+		NULL,
+		NULL,
+		1-10 = Uniform(10)
+	};
+	# ------------------------------
+	# update all
+	ID_4: {
+		ALL,
+		{(A2 : text_write)},
+		NULL,
+		1-10 = Uniform(10)
+	};
+	# ------------------------------
+	# update
+	ID_5: {
+		{(A2 : text_read)(A3 : arr_read_op.Num)(A5 : (A1 : True)(A2 : text_read))},
+		{(A2 : text_write)},
+		NULL,
+		1-10 = Normal(5, 0.1, 1000)
+	};
+}

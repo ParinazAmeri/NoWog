@@ -1,0 +1,27 @@
+{
+      FIND_1: {
+               {(cloud_index: True)(zpd: range_op)(zpd: range_op)},
+               {},
+               {(zpd: 1)},
+               0 - 50 = normal(10,1200)
+
+      };
+
+      FIND_2: {
+
+               {(cloud_index: True)(zpd: range_op)(zpd: range_op)},
+               {},
+               {(zpd: 1)},
+               50 - 110 = normal(10,2000)
+
+      };
+
+      INSERT: {
+               {},
+               {(geo_id: text_write)(version: num_match)},
+               NULL,
+               50 - 70 = normal(5,3000)
+      };
+
+
+}

@@ -1,0 +1,55 @@
+ruleset = "{" rule, { rule } "}" ;
+rule = rule_ID, ":", "{", quadruple, "=", absolute, "}", ";" ;
+
+quadruple = read, write, sort, time_period ;
+read  = ( "{", { read_phrase  }, "}" ) | "ALL" ;
+write = ( "{", { write_phrase }, "}" ) | "NULL" ;
+sort  = ( "{", { attribute, ":", sort_op }, "}" ) | "NULL" ;
+time_period = minute, "-", minute ;
+read_phrase  = "(", attribute, ":", read_type )" ;
+write_phrase = "(", attribute, ":", write_type )" ;
+read_type  = bool_match | text_read  | number_read  | array_read  | document_read ;
+write_type = bool_match | text_write | number_write | array_write | document_write ;
+
+rule_ID = identifier ;
+attribute = identifier ;
+bool_match = "True" | "False" ;
+number_read  = num_match | range_op | geo_op ;
+number_write = num_match ;
+array_read  = arr_read_op,  ".", [ arr_read_type ] ;
+array_write = ( arr_write_op | "Array" ), ".", arr_write_type ;
+document_read  = read_phrase,  { read_phrase  } ;
+document_write = write_phrase, { write_phrase } ;
+
+absolute = distribution, "(", { arguments, "," }, total, ")" ;
+distribution = "uniform" | "normal" ;
+arguments = float_number ;
+
+text_read  = "text_read" ;
+text_write = "text_write" ;
+num_match = "num_match" ;
+range_op = "range_op" ;
+geo_op = "geo_op" ;
+arr_read_op  = "arr_read_op" ;
+arr_write_op = "arr_add_op" | "arr_remove_op" ;
+arr_read_type  = "Bool" | "Num" | "Text" | "range_op" ;
+arr_write_type = "Bool" | "Num" | "Text" ;
+
+sort_op = "1" | "-1" ;
+
+minute = digit, { digit } ;
+identifier   = ( letter | "_"), { letter | digit | "_" } ;
+float_number = [ "-" ], digit, { digit }, [ ".", digit, { digit } ] ;
+
+
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+
+letter = "A" | "B" | "C" | "D" | "E" | "F" | "G"
+       | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+       | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+       | "V" | "W" | "X" | "Y" | "Z" | "a" | "b"
+       | "c" | "d" | "e" | "f" | "g" | "h" | "i"
+       | "j" | "k" | "l" | "m" | "n" | "o" | "p"
+       | "q" | "r" | "s" | "t" | "u" | "v" | "w"
+       | "x" | "y" | "z" ;
+
