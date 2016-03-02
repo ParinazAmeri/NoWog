@@ -17,7 +17,7 @@
 
 """Scenario generator.
 
-This scenario generator is actually a BNF input file generator.
+This scenario generator is actually a input file generator for NoWog.
 
 A scenario including loading stage and workload stage.
 
