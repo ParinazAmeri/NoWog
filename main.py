@@ -70,7 +70,7 @@ __version__ 	= "1.0.1"
 __date__ 		= "29.02.2016"
 __maintainer__ 	= "Haipeng Guan, Parinaz Ameri"
 __email__ 		= "guanhaipeng@gmail.com, parinaz.ameri@kit.edu"
-__status__ 		= "Production"
+__status__ 		= "beta"
 
 from bson.son import SON
 import ConfigParser
