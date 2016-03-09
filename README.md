@@ -45,7 +45,7 @@ NoWog consist of three parts:
 
 1. Read and edit all settings in **scenario.ini**:
 
-2. Run **senario.py** without any arguments
+2. Run **scenario.py** without any arguments
 
 
 
