@@ -176,8 +176,8 @@ if __name__ == '__main__':
 	arg_parser.add_argument('-t','--try', dest='try_run',help='execute each command once. In order to make sure all commands are runnable', action='store_true')
 	arg_parser.add_argument('-r','--run',help='run all commands under schedule', action='store_true')
 	arg_parser.add_argument('--drop',help='drop the whole collection before execution', action='store_true')
-	arg_parser.add_argument('--show',dest='showType',help='Display the histogram of all samples of specific operation types', choices=['all', 'find', 'insert', 'update', 'delete'], nargs='?', const='all')
-	arg_parser.add_argument('--showid',help='Display the histogram of all samples in designated sessions',nargs='+')
+	arg_parser.add_argument('--show',dest='showType',help='Display workload schedule diagram of specific operation type. Default is "all" operation', choices=['all', 'find', 'insert', 'update', 'delete'], nargs='?', const='all')
+	arg_parser.add_argument('--showid',help='Display workload schedule diagram of specific ID',nargs='+')
 	args = arg_parser.parse_args()
 	logger = init_logger()
 	if not (args.try_run or args.run or args.showType or args.showid):
