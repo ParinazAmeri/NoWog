@@ -108,7 +108,7 @@ class Executor(object):
 		if cmd_type in self.type_cache:
 			self.type_cache[cmd_type].append(ID)
 		for t in time_table:
-			self.sche.enter(t, priority, self.runCommand, [ID, time_table[t]])
+			self.sche.enter(t+3, priority, self.runCommand, [ID, time_table[t]])
 
 	def runCommand(self, ID, cmd):
 		self.logger.info('Running: [%s]' % ID)
