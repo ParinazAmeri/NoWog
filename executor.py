@@ -61,6 +61,7 @@ class Executor(object):
 		self.drop_coll = kwargs.get('drop_collection', False)
 		self.creat_coll = kwargs.get('create_collection', True)
 		self.bins = int(kwargs.get('bins', 20))
+		self.histtype = kwargs.get('histtype', 'step')
 		self.type_cache = { # caching for display
 			'find' : [], # [ID(str), ...]
 			'insert' : [],
@@ -189,7 +190,7 @@ class Executor(object):
 			self.logger.error('No [%s] operation found. Stop displaying' % (showType))
 			return
 		all_samples = [self.sessions_queue[ID].keys() for ID in target_ID]
-		plt.hist(all_samples, self.bins*len(target_ID), label=target_ID, histtype='barstacked')
+		plt.hist(all_samples, self.bins*len(target_ID), label=target_ID, histtype=self.histtype)
 		plt.xlabel('time (sec)')
 		plt.ylabel('number of query')
 		plt.title(title)
