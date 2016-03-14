@@ -175,7 +175,6 @@ if __name__ == '__main__':
 	arg_parser = argparse.ArgumentParser(description='Given no arguments, the program will stop after saving session file')
 	arg_parser.add_argument('-t','--try', dest='try_run',help='execute each command once. In order to make sure all commands are runnable', action='store_true')
 	arg_parser.add_argument('-r','--run',help='run all commands under schedule', action='store_true')
-	arg_parser.add_argument('--drop',help='drop the whole collection before execution', action='store_true')
 	arg_parser.add_argument('--show',dest='showType',help='Display workload schedule diagram of specific operation type. Default is "all" operation', choices=['all', 'find', 'insert', 'update', 'delete'], nargs='?', const='all')
 	arg_parser.add_argument('--showid',help='Display workload schedule diagram of specific ID',nargs='+')
 	args = arg_parser.parse_args()
@@ -209,9 +208,6 @@ if __name__ == '__main__':
 			exec_kwargs[k] = str_to_bool(v)
 		# exec_kwargs = {k: str_to_bool(v) for k,v in exec_kwargs.items()}
 
-	## arguments will overwrite configuration file:
-	if args.drop:
-		exec_kwargs['drop_collection'] = True
 
 
 	# # ---------------------------------------------
