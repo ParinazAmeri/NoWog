@@ -195,6 +195,7 @@ if __name__ == '__main__':
 	coll_name = config.get('connection', 'coll_name')
 	seed = config.getint('seed', 'seed')
 	MongoDB_URL = config.get('connection', 'URL')
+	size_scale_factor = config.getfloat('scale_factor', 'size_scale_factor')
 	values_kwargs = {}
 	exec_kwargs = {}
 	if 'additional_value_setting' in config._sections:
@@ -244,6 +245,7 @@ if __name__ == '__main__':
 			exit()
 		for ID in sessions:
 			logger.info('mapping session [%s]' % ID)
+			sessions[ID]['distribution']['total'] = int(sessions[ID]['distribution']['total']*size_scale_factor)
 			sessions[ID] = makeTimeTable(sessions[ID]['distribution'], sessions[ID]['parser_result'], db_cmd)
 	else:
 		logger.error('No input files')
