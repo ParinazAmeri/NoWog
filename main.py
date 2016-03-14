@@ -119,6 +119,7 @@ def init_config(config_file):
 		'coll_name': 'NoWog_test',
 		'URL': 'mongodb://localhost',
 		'seed': None,
+		'time_scale_factor': 1.0,
 	}
 	config = ConfigParser.SafeConfigParser(DEFAULT_CONFIG)
 	if not config.read(config_file):
@@ -207,7 +208,7 @@ if __name__ == '__main__':
 		for k,v in exec_kwargs.items():
 			exec_kwargs[k] = str_to_bool(v)
 		# exec_kwargs = {k: str_to_bool(v) for k,v in exec_kwargs.items()}
-
+	exec_kwargs['time_scale_factor'] = config.getfloat('scale_factor', 'time_scale_factor')
 
 
 	# # ---------------------------------------------
