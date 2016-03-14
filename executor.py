@@ -61,6 +61,7 @@ class Executor(object):
 		self.drop_coll = kwargs.get('drop_collection', False)
 		self.creat_coll = kwargs.get('create_collection', True)
 		self.bins = int(kwargs.get('bins', 20))
+		self.time_scale_factor = float(kwargs.get('time_scale_factor', 1.0))
 		self.histtype = kwargs.get('histtype', 'step')
 		self.type_cache = { # caching for display
 			'find' : [], # [ID(str), ...]
@@ -101,6 +102,7 @@ class Executor(object):
 			# raise KeyError('ID [%s] already exist!' % ID)
 			logger.warning('ID [%s] already exist in executor\'s session queue!' % ID)
 			logger.warning('New operation will overwrite old one')
+		time_table = {t*self.time_scale_factor: time_table[t] for t in time_table}
 		self.sessions_queue[ID] = time_table
 		cmd_type = time_table.values()[0].keys()[0]
 		if cmd_type in self.type_cache:
