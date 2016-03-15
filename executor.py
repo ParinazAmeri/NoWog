@@ -155,6 +155,9 @@ class Executor(object):
 		self.logger.info('# # # # # # # # Try_run finish # # # # # # # # #')
 
 
+	def get_session_queue(self):
+		return self.sessions_queue
+
 	def show(self, showType, showID):
 		"""Display histogram of operation
 		Args:

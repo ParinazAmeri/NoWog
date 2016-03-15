@@ -113,8 +113,8 @@ def init_config(config_file):
 	logger.info('Reading configuration file [%s]' % config_file)
 	DEFAULT_CONFIG = {
 		'input_files': [],
-		'save_parser': '',
-		'save_sessions': '',
+		'parser_result_path': '',
+		'sessions_file_path': '',
 		'db_name': 'NoWog',
 		'coll_name': 'NoWog_test',
 		'URL': 'mongodb://localhost',
@@ -189,8 +189,8 @@ if __name__ == '__main__':
 	config = init_config(CONFIG_FILE)
 
 	BNF_infiles = filter(None, [x.strip() for x in config.get('inputs', 'input_files').split(',')])
-	save_parser = config.get('outputs', 'save_parser')
-	save_sessions = config.get('outputs', 'save_sessions')
+	parser_result_path = config.get('outputs', 'parser_result_path')
+	sessions_file = config.get('outputs', 'sessions_file_path')
 	db_name   = config.get('connection', 'db_name')
 	coll_name = config.get('connection', 'coll_name')
 	seed = config.getint('seed', 'seed')
@@ -225,9 +225,9 @@ if __name__ == '__main__':
 			sessions.update(parser.parse_rulesetStr(rulesetStr))
 
 		# saving parser result
-		if save_parser:
-			logger.info('Saving parsing result in [%s]' % save_parser)
-			with open(save_parser, 'w') as f:
+		if parser_result_path != '':
+			logger.info('Saving parsing result in [%s]' % parser_result_path)
+			with open(parser_result_path, 'w') as f:
 				json.dump(sessions, f, indent=4)
 		else:
 			logger.warning('No parser result will be saved')
@@ -252,17 +252,6 @@ if __name__ == '__main__':
 		logger.error('Program exit with error')
 		exit()
 
-	# # ---------------------------------------------
-	# # # # # # # saving session files # # # # # # #
-	# # ---------------------------------------------
-	save_sessions = config.get('outputs', 'save_sessions')
-	if save_sessions:
-		logger.info('saving sessions in [%s]' % save_sessions)
-		with open(save_sessions, 'w') as f:
-			json.dump(sessions, f, indent=4)
-	else:
-		logger.warning('No sessions files will be saved')
-
 
 	# # ---------------------------------------------
 	# # # # # # # # # execution! # # # # # # # # #
@@ -274,6 +263,13 @@ if __name__ == '__main__':
 		for ID in sessions:
 			logger.info('Add session [%s] into executor' % ID)
 			exe.addSession(ID, sessions[ID])
+
+		if sessions_file != '':
+			logger.info('saving sessions queue in [%s]' % sessions_file)
+			with open(sessions_file, 'w') as f:
+				json.dump(exe.get_session_queue(), f, indent=4)
+		else:
+			logger.warning('No sessions files will be saved')
 
 		if args.showType or args.showid:
 			logger.info('Displaying histogram')
