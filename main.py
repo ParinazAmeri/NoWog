@@ -89,6 +89,7 @@ logger = logging.getLogger('NoWog')
 # configuration file name
 CONFIG_FILE = 'config.ini'
 
+TEMP_DATE_FILE = 'temp.dat'
 
 def init_logger():
 	ch = logging.StreamHandler()
@@ -169,6 +170,14 @@ def connectDB(MongoDB_URL):
 
 
 
+def open_file(file_name, mode):
+	try:
+		f = open(file_name, mode)
+	except Exception, e:
+		logger.error('Failed to open temporary data file: [%s]' % file_name)
+		logger.error('Program exit with error')
+		exit()
+	return f
 
 if __name__ == '__main__':
 	# # ---------------------------------------
@@ -244,10 +253,15 @@ if __name__ == '__main__':
 			logger.error('initialize mapping module failed: %s' % str(e))
 			logger.error('Program exit with error')
 			exit()
+		# save each session (mapping result) one by one into temp_data_file
+		f = open_file(TEMP_DATE_FILE, 'w')
 		for ID in sessions:
 			logger.info('mapping session [%s]' % ID)
 			sessions[ID]['distribution']['total'] = int(sessions[ID]['distribution']['total']*size_scale_factor)
-			sessions[ID] = makeTimeTable(sessions[ID]['distribution'], sessions[ID]['parser_result'], db_cmd)
+			new_time_table = makeTimeTable(sessions[ID]['distribution'], sessions[ID]['parser_result'], db_cmd)
+			f.write("{}\n".format(json.dumps({ID: new_time_table})))
+		f.close()
+		del sessions
 	else:
 		logger.error('No input files')
 		logger.error('Program exit with error')
@@ -261,9 +275,16 @@ if __name__ == '__main__':
 		logger.info('initializing executor')
 		exe = executor.Executor(**exec_kwargs)
 
-		for ID in sessions:
+		# read all sessions (mapping result) from temp_data_file
+		f = open_file(TEMP_DATE_FILE, 'r')
+		for line in f:
+			a_session = json.loads(line, object_pairs_hook=SON)
+			ID = a_session.keys()[0]
+			# logger.info('reading [%s] from file [%s]' % (ID, sessions_file))
+			a_session[ID] = {float(t): a_session[ID][t] for t in a_session[ID]}
 			logger.info('Add session [%s] into executor' % ID)
-			exe.addSession(ID, sessions[ID])
+			exe.addSession(ID, a_session[ID])
+		f.close()
 
 		if sessions_file != '':
 			logger.info('saving sessions queue in [%s]' % sessions_file)
