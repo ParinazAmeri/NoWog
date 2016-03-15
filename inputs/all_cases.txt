@@ -27,7 +27,7 @@
 		{},
 		{(A1: True)(A2: False)(A3: text_write)(A4: num_match)(A5: Array.Bool)(A6: Array.Text)(A7: Array.Num)(A8: (A1: True)(A2: False)(A3: text_write)(A4: num_match)(A5: Array.Bool)(A6: Array.Text)(A7: Array.Num))(A9: (A8: (A1: True)(A2: False)(A3: text_write)(A4: num_match)(A5: Array.Bool)(A6: Array.Text)(A7: Array.Num)))},
 		NULL,
-		0 - 1 = Uniform(1)
+		0 - 60 = Uniform(1)
 	};
 	DELETE: {
 		{(A1: True)(A2: False)(A3: text_read)(A4: num_match)(A5: geo_op)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op)(A12: (A1: True)(A2: False)(A3: text_read)(A4: num_match)(A5: geo_op)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op))(A13: (A12: (A1: True)(A2: False)(A3: text_read)(A4: num_match)(A5: geo_op)(A6: range_op)(A7: arr_read_op)(A8: arr_read_op.Bool)(A9: arr_read_op.Text)(A10: arr_read_op.Num)(A11: arr_read_op.range_op)))},
