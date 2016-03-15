@@ -271,28 +271,28 @@ if __name__ == '__main__':
 	# # ---------------------------------------------
 	# # # # # # # # # execution! # # # # # # # # #
 	# # ---------------------------------------------
+	logger.info('initializing executor')
+	exe = executor.Executor(**exec_kwargs)
+
+	# read all sessions (mapping result) from temp_data_file
+	f = open_file(TEMP_DATE_FILE, 'r')
+	for line in f:
+		a_session = json.loads(line, object_pairs_hook=SON)
+		ID = a_session.keys()[0]
+		# logger.info('reading [%s] from file [%s]' % (ID, sessions_file))
+		a_session[ID] = {float(t): a_session[ID][t] for t in a_session[ID]}
+		logger.info('Add session [%s] into executor' % ID)
+		exe.addSession(ID, a_session[ID])
+	f.close()
+
+	if sessions_file != '':
+		logger.info('saving sessions queue in [%s]' % sessions_file)
+		with open(sessions_file, 'w') as f:
+			json.dump(exe.get_session_queue(), f, indent=4)
+	else:
+		logger.warning('No sessions files will be saved')
+
 	if args.showType or args.showid or args.try_run or args.run:
-		logger.info('initializing executor')
-		exe = executor.Executor(**exec_kwargs)
-
-		# read all sessions (mapping result) from temp_data_file
-		f = open_file(TEMP_DATE_FILE, 'r')
-		for line in f:
-			a_session = json.loads(line, object_pairs_hook=SON)
-			ID = a_session.keys()[0]
-			# logger.info('reading [%s] from file [%s]' % (ID, sessions_file))
-			a_session[ID] = {float(t): a_session[ID][t] for t in a_session[ID]}
-			logger.info('Add session [%s] into executor' % ID)
-			exe.addSession(ID, a_session[ID])
-		f.close()
-
-		if sessions_file != '':
-			logger.info('saving sessions queue in [%s]' % sessions_file)
-			with open(sessions_file, 'w') as f:
-				json.dump(exe.get_session_queue(), f, indent=4)
-		else:
-			logger.warning('No sessions files will be saved')
-
 		if args.showType or args.showid:
 			logger.info('Displaying workload schedule diagram')
 			exe.show(args.showType, args.showid)
