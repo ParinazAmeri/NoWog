@@ -80,7 +80,7 @@ def parse_rulesetStr(rulesetStr):
 	ruleset_dict = {}
 	for rule in ruleList:
 		[ID, read, write, sort, time_interval, absolute] = rule
-		time_interval = sorted([float(i) for i in time_interval])
+		time_interval = sorted([int(i) for i in time_interval])
 		disType = absolute[0].lower()
 		paras = [float(i) for i in absolute[1][:-1]]
 		total = int(absolute[1][-1])
