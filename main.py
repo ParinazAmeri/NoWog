@@ -208,14 +208,14 @@ if __name__ == '__main__':
 	size_scale_factor = config.getfloat('scale_factor', 'size_scale_factor')
 	values_kwargs = {}
 	exec_kwargs = {}
-	if 'additional_value_setting' in config._sections:
-		values_kwargs = config._sections['additional_value_setting']
-	if 'additional_execution_setting' in config._sections:
+	if 'optional_value_setting' in config._sections:
+		values_kwargs = config._sections['optional_value_setting']
+	if 'optional_execution_setting' in config._sections:
 		def str_to_bool(strr):
 			if strr.lower() == 'true':  return True
 			if strr.lower() == 'false': return False
 			return strr
-		exec_kwargs = config._sections['additional_execution_setting']
+		exec_kwargs = config._sections['optional_execution_setting']
 		for k,v in exec_kwargs.items():
 			exec_kwargs[k] = str_to_bool(v)
 		# exec_kwargs = {k: str_to_bool(v) for k,v in exec_kwargs.items()}
