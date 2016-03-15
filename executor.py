@@ -17,6 +17,8 @@
 
 import sched, time
 import logging
+from datetime import datetime
+import matplotlib.pyplot as plt
 
 class Executor(object):
 	"""MongoDB operation executor
@@ -63,6 +65,7 @@ class Executor(object):
 		self.bins = int(kwargs.get('bins', 20))
 		self.time_scale_factor = float(kwargs.get('time_scale_factor', 1.0))
 		self.histtype = kwargs.get('histtype', 'step')
+		self.exec_time_cache = {} # for display execution result
 		self.type_cache = { # caching for display
 			'find' : [], # [ID(str), ...]
 			'insert' : [],
@@ -103,6 +106,7 @@ class Executor(object):
 			logger.warning('ID [%s] already exist in executor\'s session queue!' % ID)
 			logger.warning('New operation will overwrite old one')
 		time_table = {t*self.time_scale_factor: time_table[t] for t in time_table}
+		self.exec_time_cache[ID] = []
 		self.sessions_queue[ID] = time_table
 		cmd_type = time_table.values()[0].keys()[0]
 		if cmd_type in self.type_cache:
@@ -111,6 +115,7 @@ class Executor(object):
 			self.sche.enter(t+3, priority, self.runCommand, [ID, time_table[t]])
 
 	def runCommand(self, ID, cmd):
+		self.exec_time_cache[ID].append(datetime.now())
 		self.logger.info('Running: [%s]' % ID)
 		return self.db.command(cmd)
 
@@ -145,6 +150,7 @@ class Executor(object):
 		self.logger.info('# # # # # # # # Start execution # # # # # # # # #')
 		self.sche.run()
 		self.logger.info('# # # # # # # # Execution finish # # # # # # # # #')
+		self.show_exec_time()
 
 
 	def try_run(self):
@@ -154,6 +160,17 @@ class Executor(object):
 			self.runCommand(ID, self.sessions_queue[ID].values()[0])
 		self.logger.info('# # # # # # # # Try_run finish # # # # # # # # #')
 
+	def show_exec_time(self):
+		self.logger.info('displaying execution result.....')
+		start_dt = min(min(self.exec_time_cache.values()))
+		for ID in self.exec_time_cache:
+			self.exec_time_cache[ID] = [(dt - start_dt).total_seconds() for dt in self.exec_time_cache[ID]]
+		plt.hist(self.exec_time_cache.values(), self.bins*len(self.exec_time_cache), label=self.exec_time_cache.keys(), histtype=self.histtype)
+		plt.xlabel('time (sec)')
+		plt.ylabel('number of query')
+		plt.title('Execution Result')
+		plt.legend()
+		plt.show()
 
 	def get_session_queue(self):
 		return self.sessions_queue
@@ -171,7 +188,6 @@ class Executor(object):
 		if not showType and not showID: return
 		if showID and not showType: showType = 'all'
 
-		import matplotlib.pyplot as plt
 		if showType == 'all':
 			title = 'Total Workload of all operations'
 			target_ID = self.sessions_queue.keys()
