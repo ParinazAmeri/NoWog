@@ -174,7 +174,7 @@ def open_file(file_name, mode):
 	try:
 		f = open(file_name, mode)
 	except Exception, e:
-		logger.error('Failed to open temporary data file: [%s]' % file_name)
+		logger.error('Failed to open file: [%s]' % file_name)
 		logger.error('Program exit with error')
 		exit()
 	return f
