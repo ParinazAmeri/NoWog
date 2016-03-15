@@ -189,10 +189,10 @@ class Executor(object):
 		if showID and not showType: showType = 'all'
 
 		if showType == 'all':
-			title = 'Total Workload of all operations'
+			title = 'Workload schedule of all operation'
 			target_ID = self.sessions_queue.keys()
 		elif showType in self.type_cache:
-			title = 'Workload of [%s] operations' % showType
+			title = 'Workload schedule of [%s] operations' % showType
 			target_ID = self.type_cache[showType]
 		else:
 			# raise KeyError('Unknown command type: %s' % showType)

@@ -294,7 +294,7 @@ if __name__ == '__main__':
 			logger.warning('No sessions files will be saved')
 
 		if args.showType or args.showid:
-			logger.info('Displaying histogram')
+			logger.info('Displaying workload schedule diagram')
 			exe.show(args.showType, args.showid)
 
 		if args.try_run or args.run:
