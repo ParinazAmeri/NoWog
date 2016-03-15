@@ -156,7 +156,8 @@ def makeTimeTable(d_info, parser_result, db_cmd):
 def connectDB(MongoDB_URL):
 	from pymongo import MongoClient
 	try:
-		client = MongoClient(MongoDB_URL)
+		client = MongoClient(MongoDB_URL, serverSelectionTimeoutMS=1)
+		client.server_info() # force to connect
 	except Exception, e:
 		logger.error('Unable to connect to database: %s' % str(e))
 		logger.error('program exit with error')
