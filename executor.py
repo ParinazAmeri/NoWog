@@ -146,7 +146,11 @@ class Executor(object):
 			self.db.set_profiling_level(2)
 
 	def run(self):
-		self.init_execution()
+		try:
+			self.init_execution()
+		except Exception, e:
+			self.logger.error('execution initialization failed! execution stop!')
+			return
 		self.logger.info('# # # # # # # # Start execution # # # # # # # # #')
 		self.sche.run()
 		self.logger.info('# # # # # # # # Execution finish # # # # # # # # #')
@@ -154,7 +158,11 @@ class Executor(object):
 
 
 	def try_run(self):
-		self.init_execution()
+		try:
+			self.init_execution()
+		except Exception, e:
+			self.logger.error('execution initialization failed! execution stop!')
+			return
 		self.logger.info('# # # # # # # # Trying to execute # # # # # # # # #')
 		for ID in self.sessions_queue:
 			self.runCommand(ID, self.sessions_queue[ID].values()[0])
