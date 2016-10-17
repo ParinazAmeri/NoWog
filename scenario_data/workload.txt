@@ -1,0 +1,14 @@
+{
+	FIND_RULE: {
+		{(A5: arr_read_op.Bool)(A6: arr_read_op.Text)(A2: False)},
+		{},
+		{(A3: 1)},
+		0 - 30 = uniform(950)
+	};
+	UPDATE_RULE: {
+		ALL,
+		{(A1: True)(A4: num_match)(A6: Array.Text)(A2: False)},
+		NULL,
+		0 - 30 = uniform(50)
+	};
+}
